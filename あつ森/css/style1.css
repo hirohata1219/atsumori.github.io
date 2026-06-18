@@ -1,0 +1,759 @@
+@charset "utf-8";
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  background-color: #d8fffe;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+h2, h3 {
+  margin-bottom: 40px;
+  letter-spacing: 1.5px;
+}
+
+p {
+  margin: 0 4vw 40px;
+  font-size: 24px;
+  text-align: left;
+  line-height:2;
+}
+p.last {
+  letter-spacing: normal;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width:767px) {
+  p {
+    font-size: 18px;
+    margin: 40px auto;
+    width: 100%;
+  }
+  .row {
+    flex-direction: column;
+    gap: 20px 0;
+    padding: 0;
+  }
+}
+
+
+
+
+
+/* img 関連 margin */
+
+
+
+section1 img, section2 img, section3 img {
+  margin-bottom: 0;
+}
+section4 img {
+  margin-bottom: 40px;
+}
+.margin {
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+h1 {
+  font-size: 60px;
+  font-weight: 700;
+  background-color: #00ffb3;
+  position: relative;
+  padding: 1.5rem 1.5rem calc(1.5rem + 10px);
+  border: 2px solid #000;
+  margin: 20px 0;
+}
+h1::before {
+  content: 'Luxury Home';
+  position: absolute;
+  bottom: 20px;
+  right: 50px;
+  width: 30%;
+  font-family: "Dancing Script", cursive;
+}
+h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  border-top: 2px solid #000;
+  background-image: -webkit-repeating-linear-gradient(135deg, #000, #000 1px, transparent 2px, transparent 5px);
+  background-image: repeating-linear-gradient(-45deg, #000, #000 1px, transparent 2px, transparent 5px);
+  background-size: 7px 7px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+@media screen and (max-width: 1300px) {
+  h1 { font-size: 50px; }
+}
+@media screen and (max-width: 960px) {
+  h1 { font-size: 40px; }
+}
+@media screen and (max-width: 795px) {
+  h1 { font-size: 33px; }
+}
+@media screen and (max-width: 608px) {
+  h1::before {
+    bottom: 25px;
+    right: 10px;
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 520px) {
+  h1::before {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 420px) {
+  h1 {
+    font-size: 28px;
+    height: 80px;
+  }
+  h1::before {
+    font-size: 18px;
+    right: 0;
+    bottom: 15px;
+  }
+}
+
+
+
+
+h2 {
+  position: relative;
+  padding: 1.5rem 1rem;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+h2::first-letter {
+  font-size: 150%;
+  color: #54a089;
+}
+
+h2::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70%;
+  height: 10px;
+  content: '';
+  background-image: -webkit-repeating-linear-gradient(135deg, #000, #000 1px, transparent 2px, transparent 5px);
+  background-image: repeating-linear-gradient(-45deg, #000, #000 1px, transparent 2px, transparent 5px);
+  background-size: 7px 7px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+@media screen and (max-width:767px) {
+  h2 {
+    padding: 1rem 2rem calc(1rem + 10px);
+    font-size: 25px;
+    font-weight: 500;
+    width: 90%;
+    margin: 20px auto 40px;
+    padding-left: 10px;
+  }
+  h2::after {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width:439px) {
+  h2::after {
+    width: 100%;
+  }
+  h2 {
+    padding-left: 5px;
+  }
+}
+
+
+section1 h3 {
+  position: relative;
+  color: black;
+  background: #ffffff;
+  line-height: 1.4;
+  padding: 20px;
+  font-size: clamp(25px, 2vw, 35px);
+  font-weight: 500;
+  margin: 0.5em 0 0.5em;
+  border-radius: 0 5px 5px 5px;
+}
+
+section1 h3::after {
+  /*タブ*/
+  position: absolute;
+  font-family: "Font Awesome 5 Free",'Quicksand','Avenir','Arial',sans-serif;
+  font-weight: 900;
+  content: 'その①';
+  background: #2196F3;
+  color: #fff;
+  left: 0px;
+  bottom: 100%;
+  border-radius: 5px 5px 0 0;
+  padding: 6px 14px 2px;
+  font-size: 0.8em;
+  line-height: 1;
+  letter-spacing: 0.05em
+}
+.title-2::after {
+  content: 'その②';
+}
+.title-3::after {
+  content: 'その③';
+}
+
+
+
+
+section1 p {
+  padding-bottom: 20px;
+}
+@media screen and (min-width:767px) and (max-width:1172px) {
+  section1 p {
+    min-height: 130px;
+    padding: 0;
+  }
+  section1 img {
+    margin-top: auto;
+  }
+}
+@media screen and (max-width:880px) {
+  section1 p { line-height: 1.7; }
+}
+@media screen and (max-width:767px) {
+  section1 p {
+    min-height: 0;
+    padding-bottom: 20px;
+  }
+}
+@media screen and (min-width:440px) and (max-width:767px) {
+  .row {
+    width: 80%;
+    margin: 0 auto;
+  }
+  section1 img , section1 p {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+
+section2 h3 {
+  position: relative;
+  overflow: hidden;
+  font-size: 25px;
+  font-weight: 500; 
+  padding: 1.5rem 2rem 1.5rem 100px;
+  word-break: break-all;
+  border-top: 3px solid #3caf6a;
+  border-radius: 12px 0 0 0;
+  background-color: #ffffff;
+}
+
+section2 h3 span {
+  font-size: 3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  padding: 0 20px;
+  color: #fff;
+  border-radius: 10px 0 20px 10px;
+  background: #3caf6a;
+}
+
+@media screen and (max-width:1200px) {
+  section2 h3 {
+    padding: 0.6rem 1.5rem 0.6rem 80px;
+  }
+  section2 h3 span {
+    font-size: 2.1rem;
+  }
+}
+@media screen and (max-width:925px) {
+  section2 h3 {
+    padding: 0.3rem 1rem 0.3rem 50px;
+    font-size: 18px;
+  }
+  section2 h3 span {
+    font-size: 1.5rem;
+    padding: 0 12px;
+  }
+}
+@media screen and (max-width:767px) {
+  section2 h3 {
+    font-size: 25px;
+    font-weight: 500; 
+    padding: 1.5rem 2rem 1.5rem 60px;
+  }
+  section2 h3 span {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (max-width:550px) {
+  section2 h3 {
+    padding: 0.7rem 2rem 0.7rem 60px;
+  }
+  section2 h3 span {
+    font-size: 2.5rem;
+  }
+}
+
+
+
+section2 h4 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 430;
+  padding: 0 90px;
+}
+
+section2 .flex2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 80px 0 120px;
+}
+section2 .flex2 img {
+  width: 170px;
+}
+
+@media screen and (max-width:970px) {
+  section2 h4 {
+    padding: 0 50px;
+    font-size: 25px;
+  }
+  section2 .flex2 {
+    margin: 150px 0 210px;
+  }
+  section2 .flex2 img {
+    width: 80px;
+  }
+}
+@media screen and (max-width:767px) {
+  section2 h4 {
+    padding: 0 50px;
+    font-size: 20px;
+  }
+  section2 .flex2 {
+    margin: 200px 0;
+  }
+} 
+@media screen and (max-width:600px) {
+  section2 h4 {
+    padding: 0 20px;
+    font-size: 15px;
+  }
+  section2 .flex2 {
+    margin: 150px 0;
+  }
+  section2 .flex2 img {
+    width: 50px;
+  }
+}
+
+
+
+.col {
+  width: 32%;
+  background-color: #8cffdc;
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.col-2 {
+  width: 48%;
+  background-color: #c7efb1;
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+.col p {
+  background-color: #8cffdc;
+  margin: 20px auto;
+  padding-bottom: 0;
+  font-size: 18px;
+}
+
+.col-2 p {
+  background-color: #c7efb1;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+.gap p {
+  margin-bottom: 20px;
+}
+
+
+@media screen and (max-width:767px) { 
+  
+  .col, .col-2, col-3 {
+    width: 100%;
+  }
+  .col-2 p {
+    width: 100%;
+  }
+}
+
+
+
+ul {
+  margin: 10px 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+section3 p {
+  margin: 10px 0;
+  padding: 10px;
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+.back-color {
+  background-color: #dbdfe3;
+  padding: 0 20px 20px;
+  gap: 5px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width:767px) {
+  section3 h2 {
+    margin-bottom: 0;
+  }
+  ul {
+      margin: 30px auto;
+      width: 100%;
+      gap: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  section3 p {
+    width: 100%;
+    font-size: 24px;
+    font-family: "Noto Serif JP", serif;
+    margin: 0;
+    }
+  section3 img {
+      margin-bottom: 20px;
+    }
+    .back-color {
+      padding: 0 20px;
+      margin-top: 20px;
+    }
+}
+
+
+
+
+
+
+section4 h3 {
+  padding: 1.5rem 1rem;
+  font-size: 50px;
+  font-weight: 500; 
+  border-bottom: dashed 5px #000000;
+  width: 30%;
+} 
+section4 h3:first-letter {
+  font-size: 150%;
+  color: #54a089;
+}
+
+
+
+@media screen and (max-width:767px) {
+  section4 h3 {
+    font-size: 25px;
+    letter-spacing: 3px;
+    padding: 10px;
+    margin: 0 5% 40px;
+  }
+  .zero {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width:450px) {
+  section4 h3 { font-size: 20px; }
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flex h4 {
+  font-size: 40px;
+  padding: 1rem 3rem;
+  margin: 0 auto 20px;
+  -webkit-transform: skew(-15deg);
+  transform: skew(-15deg);
+  color: #fff;
+  background-image: -webkit-gradient(linear, right top, left top, from(#9be15d), to(#00e3ae));
+  background-image: -webkit-linear-gradient(right, #9be15d 0%, #00e3ae 100%);
+  background-image: linear-gradient(to left, #9be15d 0%, #00e3ae 100%);
+}
+.flex .dif {
+  background-image: -webkit-gradient(linear, left top, right top, from(#209cff), to(#68e0cf));
+  background-image: -webkit-linear-gradient(left, #209cff 0%, #68e0cf 100%);
+  background-image: linear-gradient(to right, #209cff 0%, #68e0cf 100%);
+}
+
+section4 .col-3 {
+  width: 46%;
+  margin: 0 auto;
+}
+section4 .col-3 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media screen and (max-width:1040px) {
+  .flex h4 {
+    font-size: 30px;
+    padding: 1rem 3rem;
+  }
+  section4 .col-3 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 0 auto 40px;
+  }
+}
+
+@media screen and (max-width:814px) {
+  .flex h4 {
+    padding: 0.6rem 3rem;
+  }
+  section4 .col-3 {
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+  }
+  section4 .col-3 img {
+    width: 90%;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width:550px) {
+  .flex h4 {
+    font-size: 25px;
+    padding: 0.4rem 1.5rem;
+  }
+}
+@media screen and (max-width:420px) {
+  .flex h4 {
+    font-size: 22px;
+    padding: 0.2rem 1rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.a {
+  object-fit: cover;
+  height: 300px;
+  height: 270px;
+  width: 24%;
+}
+.b {
+  object-fit: cover;
+  height: 270px;
+  width: 18%;
+}
+.c {
+  object-fit: cover;
+  height: 270px;
+  width: 28%;
+}
+
+.last {
+  font-size: 20px;
+  padding: 50px 0 40px;
+  margin: 0;
+  text-align: center;
+  line-height: 1.6;
+}
+
+@media screen and (min-width:450px) and (max-width:767px) {
+  .flex {
+     margin: 0 5px; 
+  }
+}
+@media screen and (max-width: 767px) {
+  .a, .b, .c {
+    width: 48%;
+    height: 140px;
+    margin: 1%;
+  }
+  .last {
+    width: 100%;
+    font-size: 10px;
+    padding: 15px 0 8px;
+  }
+}
+
+
+
+/* フッター */
+
+
+
+footer {
+  text-align: center;
+  background-color: #000;
+  height: 140px;
+  margin-top: 10px;
+}
+
+footer a {
+  color: #fff;
+  font-size: 20px;
+  display: inline-block;
+  padding-top: 50px;
+}
+footer a:hover {
+  color: rgb(255, 0, 0);
+  transition: 0.3;
+}
+
+@media screen and (max-width:767px) {
+  footer {
+    height: 60px;
+  }
+  footer a {
+    font-size: 15px;
+    padding-top: 20px;
+  }
+  .ninety {
+    width: 90%;
+  }
+}
+
+
+/* 文字カラー */
+
+
+
+strong {
+  font-size: 110%;
+}
+.se {
+  background-color: #8cffdc;
+  color: #00000048;
+}
+.taki {
+  background-color: #8cffdc;
+  color: #082cf5;
+}
+.tak {
+  color: #082cf5;
+}
+.ie {
+  background-color: #8cffdc;
+  color: #c8ae03;
+}
+.i {
+  color: #c4b134;
+}
+.ca {
+  color: #ff0101;
+}
+.sai {
+  color: #53ff44;
+}
+.furo {
+  color: #62e5ff;
+}
+.hana {
+  color: #ff9c62;
+  background-color: #c7efb1;
+}
+.mon {
+  color: #969609;
+  background-color: #c7efb1;
+}
+.shop {
+  color: #658bfc;
+}
+.office {
+  color: #ff5050;
+}
+.huku {
+  color: #fa7be1;
+}
+.cli {
+  color: #03bdd2;
+}
+.haku {
+  color: #5a38a8;
+}
+.yatai {
+  color: #ae43b0;
+}
+.fes {
+  color: #ff008c;
+}
+.ken {
+  color: #a2a2a2;
+  font-size: 110%;
+}
+.suna {
+  color: #b78e54;
+  font-size: 110%;
+}
+.haka {
+  color: #51089a;
+  font-size: 110%;
+}
